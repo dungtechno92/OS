@@ -1,0 +1,10 @@
+Định nghĩa process:
+  - Là chương trình đang thực hiện - a program in execution.
+  - Bộ nhớ của process:
+    + stack section: chứa biên cục bộ, địa chỉ trả về.
+    + heap section: các biến được khai báo động trong quá trình process chạy.
+    + data section: biến toàn cục.
+    + text: chứa mã lệnh.
+  
+Định nghĩa chương trình:
+  - Mã chương trình: 
