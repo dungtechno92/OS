@@ -1,10 +1,33 @@
+1. Process:
 Định nghĩa process:
   - Là chương trình đang thực hiện - a program in execution.
   - Bộ nhớ của process:
     + stack section: chứa biên cục bộ, địa chỉ trả về.
-    + heap section: các biến được khai báo động trong quá trình process chạy.
+    + heap section: các biến được khai báo động trong quá trình process chạy. Heap và stack không bị fix cứng nhưng tổng của
+    cả 2 phần thì bị fix cứng ?
     + data section: biến toàn cục.
     + text: chứa mã lệnh.
-  
-Định nghĩa chương trình:
-  - Mã chương trình: 
+Trạng thái của tiến trình(Figure 3.2):
+  - New:Tiến trình được tạo.
+  - Running: Tiến trình đang chạy.
+  - Waiting: Tiến trình chờ các event kiểu như I/O hay chờ tiến trình khác.
+  - Ready: Tiến trình sẵn sàng được assign cho CPU.
+  - Terminated: Tiến trình đã hoàn thành xong.
+  * Chuyển từ trạng thái new sang ready như thế nào. Có khi nào tiến trình được tạo nhưng không được admit?
+Khối điều khiển tiến trình(PCB):
+  - Trạng thái - Process state.
+  - Bộ đếm lệnh - Propram counter: Địa chỉ trỏ đến chỉ thị tiếp theo được thực hiện.
+  - Các thanh ghi của CPU - register CPU: Chứa các thông tin như con trỏ stack, thanh ghi chỉ số, các thông tin về điều kiện code, 
+  . Các thông tin này và bộ đếm lệnh phải được ghi lại khi interupt hay lời gọi hệ thống xảy ra.
+  - Thông tin điều phối CPU - CPU-scheduling information: Chứa độ ưu tiên của tiến trình đó và các biến số về tiến trình.
+  - Thông tin quản lý bộ nhớ - Memory managent information
+  - Thông tin các tài nguyên có thê sử dụng - Account information
+  - Thông tin về I/O - I/O information
+  - Con trỏ đến PCB khác.
+* Tại sao không sao ra nhiều tiến trình con mà phải sinh ra thread?
+Hàng đợi điều phối tiến trình - Scheduling queues(Được lưu dưới dạng linkedlist):
+  - Job queue: chứa tất cả các PCB của process của hệ thống.
+  - Ready queue: Chứa các PCB của process sẵn sàng được thực thi.
+  - Device queues: Chứa các PCB của process đang đợi để sử dụng 1 device nào đó.
+* Khi tiến trình đợi tiến trình con thực hiên xong hoặc đợi interupt thì PCB của nó được xếp vào đâu?
+
