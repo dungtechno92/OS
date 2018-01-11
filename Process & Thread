@@ -30,4 +30,11 @@ Hàng đợi điều phối tiến trình - Scheduling queues(Được lưu dư�
   - Ready queue: Chứa các PCB của process sẵn sàng được thực thi.
   - Device queues: Chứa các PCB của process đang đợi để sử dụng 1 device nào đó.
 * Khi tiến trình đợi tiến trình con thực hiên xong hoặc đợi interupt thì PCB của nó được xếp vào đâu?
+Scheduler:
+  - Điều phối công việc - Job scheduler(Long term): 
+  - Điều phối CPU - CPU scheduler(Short term): 
+  - Swapping tiến trình - Medium-term scheduler: Khi nào thì swapping gọi process ?
+Chuyển ngữ cảnh - Context Switch:
+  - A typical speed is a few milliseconds. Nó phục thuộc vào tốc độ memory.
+  - Footprint.
 
