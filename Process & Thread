@@ -39,5 +39,18 @@ Chuyển ngữ cảnh - Context Switch:
   - A typical speed is a few milliseconds. Nó phục thuộc vào tốc độ memory.
   - Footprint.
 3. Operations on Processes:
-  - Tạo tiến trình: 
+  3.1 Tạo tiến trình: 
+    - Khi tiến trình con được tạo nó sẽ lấy resource của thằng cha hay resource của hệ thống.
+    - Khi tiến trình con được tạo nó có 2 khả năng xảy ra:
+      + Tiến trình con sẽ chạy song song với cha.
+      + Tiến trình cha sẽ đợi cho đến khi tiến trình con xong.
+    - Về không gian địa chỉ bộ nhớ:
+      + Tiến trình con duplicate của tiến trình cha.
+      + Tiến trình con có 1 chương trình mới nạp vào nó.
+  3.2. Process Termination:
+    - Tiến trình cha có thể kill tiến trình con:
+      + Tiến trình con thực hiện vượt quá tài nguyên cho phép. Tiến trình tra phải có cơ chế điều tra việc đó.
+      + Tiến trình con phải thực hiện những nhiệm vụ không còn cần thiết.
+      + Khi tiến trình cha kết thúc OS sẽ không cho phép tiến trình con tiếp tục hoạt động.
+  
 
