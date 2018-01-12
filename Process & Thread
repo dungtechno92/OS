@@ -1,4 +1,4 @@
-1. Process:
+1. Process concept:
 Định nghĩa process:
   - Là chương trình đang thực hiện - a program in execution.
   - Bộ nhớ của process:
@@ -30,6 +30,7 @@ Hàng đợi điều phối tiến trình - Scheduling queues(Được lưu dư�
   - Ready queue: Chứa các PCB của process sẵn sàng được thực thi.
   - Device queues: Chứa các PCB của process đang đợi để sử dụng 1 device nào đó.
 * Khi tiến trình đợi tiến trình con thực hiên xong hoặc đợi interupt thì PCB của nó được xếp vào đâu?
+2. Process Scheduling:
 Scheduler:
   - Điều phối công việc - Job scheduler(Long term): 
   - Điều phối CPU - CPU scheduler(Short term): 
@@ -37,4 +38,6 @@ Scheduler:
 Chuyển ngữ cảnh - Context Switch:
   - A typical speed is a few milliseconds. Nó phục thuộc vào tốc độ memory.
   - Footprint.
+3. Operations on Processes:
+  - Tạo tiến trình: 
 
