@@ -52,5 +52,58 @@ Chuyển ngữ cảnh - Context Switch:
       + Tiến trình con thực hiện vượt quá tài nguyên cho phép. Tiến trình tra phải có cơ chế điều tra việc đó.
       + Tiến trình con phải thực hiện những nhiệm vụ không còn cần thiết.
       + Khi tiến trình cha kết thúc OS sẽ không cho phép tiến trình con tiếp tục hoạt động.
-  
-
+4. Hợp tác tiến trình - Interprocess communication:
+  Lý do cần hợp tác tiến trình:
+    - Chia sẻ thông tin.
+    - Tăng tốc độ tính toán: chỉ đạt được khi CPU có nhiều core.
+    - Modun hóa.
+    - Tiện lợi: Người dùng có thể làm nhiều việc 1 lúc.
+    4.1. Shared-Memory Systems: Gặp phải vấn đề về cache khi 2 process chạy ở 2 core khác nhau.
+      - Producer - Consumer.
+    4.2. Message-Passing Systems:
+      - Một số phương thức để implement:
+        + Direct or indirect communication
+        + Synchronous or asynchronous communication
+        + Automatic or explicit buffering
+      - Các thao tác cơ bản:
+        + Send.
+        + Recive.
+      - Nếu muốn 2 tiến trình P và Q muốn trao đổi chúng cần:
+        + Thiết lập một liên kết truyền thông(vật lý/ logic) giữa chúng.
+        + Trao đổi các message nhớ các thao tác send/ recive.
+      - Các vấn đề:
+        + Các liên kết được thiết lập như thế nào ?
+        + Một liên kết gồm bao nhiêu tiến trình ?
+        + Bao nhiêu liên kết tồn tại giữa 2 tiến trình ?
+        + Kích thước message cố định hay thao đổi ?
+        + Liên kết 1 hay 2 chiều ?
+      4.2.1. Naming:
+        - Direct communication - Truyền thông trực tiếp:
+          + Các tính chất:
+            • Các liên kết thiết lập auto.
+            • 1 liên kết gồm 2 tiến trình.
+            • 1 liên kết tồn tại giữa 2 tiến trình.
+            + Liên kết có thể 1 hay 2 chiều.
+          + Các thao tác:
+            • send.
+            • recive.
+        - Indirect communication - Truyền thông gián tiếp:
+          + Các tính chất:
+            • Các liên kết được thiết lập chỉ khi các tiến trình dùng chung 1 hòm thư.
+            • 1 liên kết có thể gồm > 2 tiến trình.
+            • có thể tồn tại > 2 liên kết giữa 2 tiến trình.
+            • Liên kết 1 hay 2 chiều.
+          + Các thao tác:
+            • Tạo hòm thư.
+            • Gửi nhận message thông qua hòm thư.
+            • Hủy hòm thư.
+        4.2.2. Đồng bộ tiến trình:
+          - Blocking send: Tiến trình gửi thông báo đợi cho đến khi message được nhận.
+          - Nonblocking send: Tiến trình gửi thông báo tiếp tục làm việc khác sau khi gửi message.
+          - Blocking recive: Tiến trình nhận thông báo đợi cho đến khi message có trong mailbox.
+          - Nonblocking recive: Tiến trình nhận thông báo nhận message hợp lệ hoặc giá trị null.
+        4.2.3. Vùng nhớ đệm:
+          - Message được lưu vào hàng đợi. Hàng đợi có thể được implement theo những cách sau:
+            + Capacity = 0: Hàng đợi không có khả năng bằng 0 vì vậy sender phải đợi đến khi reciver nhận được message.
+            + Bounded capacity: Hàng đợi có sức chứa hữu hạn, nếu hàng đợi chứa đầy message thì sender phải đợi đến khi hàng đợi có chỗ trống.
+            + Unbounded capcity: Sender không bao giờ phải đợi.
