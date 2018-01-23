@@ -1,0 +1,4 @@
+1. 5.
+2. 8 processes được tạo.
+3. 3 điều phức tạp ảnh hưởng tới hệ hiều hành khi implement concurent processing:
+  - 
