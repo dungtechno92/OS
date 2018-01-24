@@ -1,4 +1,12 @@
 1. 5.
 2. 8 processes được tạo.
-3. 3 điều phức tạp ảnh hưởng tới hệ hiều hành khi implement concurent processing:
-  - 
+3. 3 điều phức tạp ảnh hưởng tới hệ hiều hành khi implement concurrent processing:
+  - Nhiều proccess có thể access tới hệ thống cùng 1 lúc.
+  - Tài nguyên của từng proccess phải được bảo vệ tránh việc các proccess khác làm ảnh ường tới( các proccess khác có thể sử dụng
+  hay phá huỷ). Tài nguyên cho từng proccess phải được giới hạn.
+  - Tránh deadlock xảy ra.
+4. Khi switch proccess, con trỏ sẽ được trỏ đến vùng có chứ PCB của proccess tiếp theo(do nó đã được load vào register). Context
+của proccess mới được load lên register( nếu chưa có trên register). Nếu các register đã được dùng hết, context của 1 proccess nào
+đó sẽ được chuyển từ register vào trong memory để có chỗ trống cho context của proccess mới.
+* Thông tin PCB được lưu ở đâu register hay memory ? Được lưu vào memory.
+5. Chỉ chia sẻ share memory segments. Stack và heap được copy cho process mới.
