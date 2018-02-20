@@ -1,0 +1,14 @@
+1. Overview:
+  - Định nghĩa: Thread là 1 đơn vị cơ bản của việc sử dụng CPU. Thread bao gồm id, a program counter, a register set, a stack.
+  - Lợi ích: 
+    + Responsiveness.
+    + Resource sharing.
+    + Economy.
+    + Scalability.
+2. Multicore Programming:
+  - Challenges: 
+    + Identifying tasks.
+    + Balance.
+    + Data dependency.
+    + Testing and debugging.
+    
