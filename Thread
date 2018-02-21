@@ -11,4 +11,7 @@
     + Balance.
     + Data dependency.
     + Testing and debugging.
-    
+  - Multithreading Models: Kernel thread, process là cái củ cải gì? 
+    + Many to One Model: Map nhiều thread user-level với 1 kernel 
+    + One to One Model: .
+    + Many to Many Model: .
