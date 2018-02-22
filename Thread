@@ -1,5 +1,6 @@
 1. Overview:
   - Định nghĩa: Thread là 1 đơn vị cơ bản của việc sử dụng CPU. Thread bao gồm id, a program counter, a register set, a stack.
+  - Có 2 loại thread: Kernel-level thread và user-level thread.
   - Lợi ích: 
     + Responsiveness.
     + Resource sharing.
@@ -15,3 +16,4 @@
     + Many to One Model: Map nhiều thread user-level với 1 kernel 
     + One to One Model: .
     + Many to Many Model: .
+    * Reference: https://www.youtube.com/watch?v=LNiNOW-_8lw&t=859s.
