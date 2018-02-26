@@ -17,3 +17,16 @@
     + One to One Model: .
     + Many to Many Model: .
     * Reference: https://www.youtube.com/watch?v=LNiNOW-_8lw&t=859s.
+3. Multithreading Models:
+4. Thread libraries
+  - Java threads: Tạo object thread không tạo thread mà thread được tạo khi chạy phương thức start. Khi đó, thread object sẽ làm 2 việc:
+    + Khởi tạo vùng nhớ và khởi tạo thread trong jvm(Vùng nhớ mặc định stask của thread được khởi tạo là 1MB).
+    + Gọi phương thức run(), làm cho thread có đủ đk để chạy bởi JVM.
+5. Implicit Threading
+  - JVM ẩn đi các implementation details bên trong OS và cung cấp abstract để Java có thể làm việc trên mọi OS hỗ trợ JVM.
+  - Việc làm sao Java thread được map với kernel thread sẽ do implementation cụ thể của JVM quyết định(việc này sẽ tùy thuộc vào hệ đề hành)
+  . Ví dụ : Jvm chạy trên Windows sẽ dùng Windows API để tạo thread, JVM chạy trên Linux, MacOS sẽ dùng Pthreads API để tạo thread.
+  - Các công nghệ để quản lý multi thread:
+    + Thread pools
+    + OpenMP
+    + Grand Central Dispatch
