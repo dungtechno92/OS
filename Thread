@@ -31,3 +31,13 @@
     + OpenMP
     + Grand Central Dispatch
 6. Threading issues
+  - Fork(), exec() system calls:
+    + Fork: Duplicate tất cả các thread trong process hiện tại hoặc duplicate riêng thread đang gọi fork().
+    + Exec: Thay thế toàn bộ các thread trong process bằng tham số truyền vào hàm.
+  - Signal Handling
+  - Thread cancellation:
+    + Cacellation thread có 2 kịch bản: Asynchronous cancellation, Deferred cancellation..
+    + Asynchronous cancellation: Có thể không giải tài nguyên cần thiết của hệ thống.
+    + Deferred cancellation: Thread được cancel sẽ check cờ để quyết định thì nào thì tự cancel.
+  - Thread-Local Storage: 
+    
