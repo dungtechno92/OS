@@ -39,5 +39,9 @@
     + Cacellation thread có 2 kịch bản: Asynchronous cancellation, Deferred cancellation..
     + Asynchronous cancellation: Có thể không giải tài nguyên cần thiết của hệ thống.
     + Deferred cancellation: Thread được cancel sẽ check cờ để quyết định thì nào thì tự cancel.
-  - Thread-Local Storage: 
+  - Thread-Local Storage:
+    + Nhiều thread sẽ dùng chung data của process nhưng trong 1 số trường hợp thread cần phải copy dữ liệu nhất định của process chứ
+    không trực tiếp dùng. Người ta gọi đó là TLS. TLS khác với local variables.
+  - Scheduler Activations:
+    + LWP là data structure đứng giữa kernel thread và user thread 
     
