@@ -43,5 +43,8 @@
     + Nhiều thread sẽ dùng chung data của process nhưng trong 1 số trường hợp thread cần phải copy dữ liệu nhất định của process chứ
     không trực tiếp dùng. Người ta gọi đó là TLS. TLS khác với local variables.
   - Scheduler Activations:
-    + LWP là data structure đứng giữa kernel thread và user thread 
+    + LWP: data structure đứng giữa kernel thread và user thread.
+    + Scheduler activation: kế hoạch liên kết giữa kernel thread và user thread.
+    + Upcall: kernel thông báo cho application về 1 sự kiện nhất định.
+    + Upcall handler: thread library sẽ xử lý upcall, upcall handler sẽ chạy trên LWP.
     
