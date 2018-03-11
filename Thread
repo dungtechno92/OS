@@ -1,5 +1,7 @@
 1. Overview:
   - Định nghĩa: Thread là 1 đơn vị cơ bản của việc sử dụng CPU. Thread bao gồm id, a program counter, a register set, a stack.
+  - Tại sao lại cần Thread: Vì nếu chỉ dùng proccess thì chương trình có thể bị duplicate dữ liệu rất nhiều do chương trình có thể có nhiểu
+  phần việc và có dùng chung bộ nhớ.
   - Có 2 loại thread: Kernel-level thread và user-level thread.
   - Lợi ích: 
     + Responsiveness.
@@ -43,8 +45,12 @@
     + Nhiều thread sẽ dùng chung data của process nhưng trong 1 số trường hợp thread cần phải copy dữ liệu nhất định của process chứ
     không trực tiếp dùng. Người ta gọi đó là TLS. TLS khác với local variables.
   - Scheduler Activations:
-    + LWP: data structure đứng giữa kernel thread và user thread.
+    + LWP - Virtual proccess: data structure đứng giữa kernel thread và user thread.
     + Scheduler activation: kế hoạch liên kết giữa kernel thread và user thread.
     + Upcall: kernel thông báo cho application về 1 sự kiện nhất định.
     + Upcall handler: thread library sẽ xử lý upcall, upcall handler sẽ chạy trên LWP.
+    
+    
+    Refrences:
+      - https://www.youtube.com/watch?v=qkMk3k15PPA
     
