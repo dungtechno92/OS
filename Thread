@@ -2,6 +2,9 @@
   - Định nghĩa: Thread là 1 đơn vị cơ bản của việc sử dụng CPU. Thread bao gồm id, a program counter, a register set, a stack.
   - Tại sao lại cần Thread: Vì nếu chỉ dùng proccess thì chương trình có thể bị duplicate dữ liệu rất nhiều do chương trình có thể có nhiểu
   phần việc và có dùng chung bộ nhớ.
+  - Thread state(Thread control block) bao gồm:
+    + Stack: chứ local variable và function call.
+    + Set of registers(include EIP, ESP): giúp stop and restart thread switch context.
   - Có 2 loại thread: Kernel-level thread và user-level thread.
   - Lợi ích: 
     + Responsiveness.
@@ -53,4 +56,5 @@
     
     Refrences:
       - https://www.youtube.com/watch?v=qkMk3k15PPA
+      - https://computing.llnl.gov/tutorials/pthreads/
     
