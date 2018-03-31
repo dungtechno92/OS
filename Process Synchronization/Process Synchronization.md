@@ -1,12 +1,9 @@
 # Race condition.
 
 # The Critical-Section Problem. 3 điều kiện:
-## Mutual exclusion
-#### Khi 1 process thực thi critial section, không process nào được thực thi critial section đó.
-## Progress
-#### Nếu không có tiến trình Pi nào thực hiện CSi và có m tiến trình Pj1, Pj2, ..., Pjm muốn thực hiện CSj1, CSj2, ..., CSjm thì chỉ có các tiến trình không thực hiện REMAINjk (k=1,...,m) mới được xem xét thực hiện CSjk.
-## Bounded waiting
-#### Khi yêu cầu đó được chấp nhận, số lần các tiến trình Pj (với j≠i) được phép thực hiện CSj phải bị giới hạn
+#### Mutual exclusion: Khi 1 process thực thi critial section, không process nào được thực thi critial section đó.
+#### Progress: Nếu critial section còn khả năng phục vụ và tồn tại process muốn vào đoạn găng, thì process đó phải được thực thi critial section.
+#### Bounded waiting: Nếu critial section hết khả năng phục vụ mà vẫn còn process muốn thực hiện nó thì process đó phải xếp vào hàng đợi và thời gian đợi là hữu hạn.
 #### Two general approaches are used to handle critical sections in operating systems preemptive kernels and nonpreemptive kernels.
 
 # Peterson’s Solution
