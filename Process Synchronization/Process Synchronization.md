@@ -8,12 +8,14 @@
 
 ## Peterson’s Solution
 
-## Synchronization Hardware
+## Hardware instructions:
+#### TSL: Không phù hợp cho multi processor. Không đảm bảo được chờ đợi hữu hạn.Luôn phải kiểm tra critical section đã được giải phóng hay chưa.
+#### CAS: Không đảm bảo được chờ đợi hữu hạn.Luôn phải kiểm tra critical section đã được giải phóng hay chưa.
 
-## TSL and CAS
-
-## Mutex locks and Semaphores
-  
+## Operating-systems designers: 
+#### Mutex locks: 
+#### Semaphores
   
 # Reference:
-### http://coltech.vnu.edu.vn/httt/components/com_joomlaboard/uploaded/files/nlhdh_tuan4.pdf
+#### http://coltech.vnu.edu.vn/httt/components/com_joomlaboard/uploaded/files/nlhdh_tuan4.pdf
+#### https://en.wikipedia.org/wiki/Compare-and-swap
