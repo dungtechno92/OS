@@ -20,6 +20,17 @@
 #### Mutex locks - spinlock: Advantages: Dễ implement, đảm bảo synchronization. Disavantages: Chỉ 1 process được thực thi critical section tại 1 thời điểm, kiểm tra lock thường phải thực hiện vòng loop dẫn đến lãng phí CPU.
 #### Semaphores: Advantages: Nhiều process có thể thực thi critical section tại 1 thời điểm, nếu cpu không support mutex lock có thể dùng semaphore để thay thế. Disadvantages: Nếu wait queue được sử dụng, có thể dẫn đến deadlock và starvation. Nếu wait queue không được sử dụng, lãng phí CPU
 #### Priority inversion
+
+## Classic Problems of Synchronization
+#### Producer - Comsumer
+#### The Readers–Writers Problem
+#### The Dining-Philosophers Problem
+
+## Monitor
+#### Monitor Usage
+#### Dining-Philosophers Solution Using Monitors
+#### Implementing a Monitor Using Semaphores
+#### Resuming Processes within a Monitor
   
 # Reference:
 #### http://coltech.vnu.edu.vn/httt/components/com_joomlaboard/uploaded/files/nlhdh_tuan4.pdf
