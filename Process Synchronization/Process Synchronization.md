@@ -27,6 +27,7 @@
 #### The Dining-Philosophers Problem
 
 ## Monitor
+##### Semaphore(low-level synchronization) cung cấp cách synchronize process hiệu quả và tiện lợi nhưng sử dụng nó sai lầm có thể dẫn đến các lỗi. Nên các ngôn ngữ bậc cao cung cấp high-level synchronization
 #### Monitor Usage
 #### Dining-Philosophers Solution Using Monitors
 #### Implementing a Monitor Using Semaphores
