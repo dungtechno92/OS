@@ -47,3 +47,6 @@
 #### http://coltech.vnu.edu.vn/httt/components/com_joomlaboard/uploaded/files/nlhdh_tuan4.pdf
 #### https://en.wikipedia.org/wiki/Compare-and-swap
 
+## Questions:
+#### Khác nhau giữa lock và condition
+
