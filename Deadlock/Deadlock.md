@@ -1,0 +1,3 @@
+Starvation
+Deadlock
+Fairness lock
