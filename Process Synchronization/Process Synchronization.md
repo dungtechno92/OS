@@ -38,6 +38,7 @@
 
 ## Monitor
 ##### Semaphore(low-level synchronization) cung cấp cách synchronize process hiệu quả và tiện lợi nhưng sử dụng nó sai lầm có thể dẫn đến các lỗi. Nên các ngôn ngữ bậc cao cung cấp high-level synchronization
+##### Defference between lock and monitor: https://howtodoinjava.com/core-java/multi-threading/multithreading-difference-between-lock-and-monitor/
 ### Monitor Usage
 ### Dining-Philosophers Solution Using Monitors
 ### Implementing a Monitor Using Semaphores
